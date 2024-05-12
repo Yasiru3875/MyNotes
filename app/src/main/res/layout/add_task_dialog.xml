@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add12">
+
+        <TextView
+            android:id="@+id/titleTaskTxt"
+            android:layout_width="120dp"
+            android:layout_height="58dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="16dp"
+            android:text="New Task"
+            android:textColor="#FFC107"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/closeImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_close" />
+
+        <View
+            android:id="@+id/viewHLine"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/titleTaskTxt"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewHLine"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="8dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.App.TextInputLayout"
+                android:id="@+id/edTaskTitleL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter The Task Title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edTaskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="#C1E4FF"
+                    android:textColor="@color/black"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.App.TextInputLayout"
+                android:id="@+id/edTaskDescL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter The Task Description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edTaskDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D1B8FF"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:lines="5"
+                    android:maxLines="5" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/saveTaskBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#60AE05"
+                android:textColor="@color/white"
+                style="@style/Widget.App.Button.Fill"
+                android:text="Save Task"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
